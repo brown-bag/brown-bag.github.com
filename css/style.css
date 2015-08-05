@@ -12,14 +12,10 @@ body {
     display: block;
     width: 100%;
     text-align: center;
-    background:
-      url('../img/bag-background-1900x500.png') no-repeat center 0,
-      url('../img/bag-background-1900x500.svg') no-repeat center 0,
-      url('../img/bag-background-repeat-x.png') repeat-x center 0;
-    -webkit-background-size: 1900px 500px, 30px 500;
-    -moz-background-size: 1900px 500px, 30px 500;
-    background-size: 1900px 500px, 30px 500;
-    -o-background-size: 1900px 500px, 30px 500;
+    background-image: url('../img/bag-background-700x500.svg'), url('../img/bag-background-repeat-x.png');
+    background-size: contain, contain;
+    background-repeat: no-repeat, repeat-x;
+    background-position: left, left;
 }
 
 .headline {
