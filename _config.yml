@@ -1,4 +1,9 @@
 excerpt_separator: <!--more-->
+permalink: /:year/:month/:day/:title.html
+
+name: brown-bag.net - Feed your brain
+description: A virtual conference held as brown-bags
+url: http://www.brown-bag.net
 
 slogantitle: Feed your brain
 slogansubtitle: Eat, learn and enjoy
