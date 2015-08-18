@@ -1,11 +1,12 @@
 <hr class="featurette-divider">
-{% for post in site.posts %}
+{% assign posts = site.posts | where: "archive", true %}
+{% for post in posts %}
 <div class="featurette" id="{{ post.title | slugify }}">
-  <a href="https://github.com/brown-bag/brown-bag.github.com/edit/master/{{ post.path }}">Improve this page <i class="fa fa-pencil"></i></a>
   <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
   <h2 class="featurette-heading">{{ post.title | remove: '<p>' | remove: '</p>' }}
     <span class="text-muted">{{ post.teaser  | remove: '<p>' | remove: '</p>' }}</span>
   </h2>
+  <h4>{{ post.date | date_to_rfc822 }} {{ post.author }}</h4>
   <p class="lead">{{ post.content | remove: '<p>' | remove: '</p>' }}</p>
 </div>
 
