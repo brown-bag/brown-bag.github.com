@@ -1,13 +1,13 @@
 <hr class="featurette-divider">
-{% assign posts = site.posts | where: "archive", true %}
-{% for post in posts %}
-<div class="featurette" id="{{ post.title | slugify }}">
-  <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
-  <h2 class="featurette-heading">{{ post.title | remove: '<p>' | remove: '</p>' }}
-    <span class="text-muted">{{ post.teaser  | remove: '<p>' | remove: '</p>' }}</span>
+{% assign bags = site.posts | where: "archive", true %}
+{% for bag in bags %}
+<div class="featurette" id="{{ bag.title | slugify }}">
+  <img class="featurette-image img-circle img-responsive pull-right" src="{{ bag.author-pic }}">
+  <h2 class="featurette-heading">{{ bag.title | remove: '<p>' | remove: '</p>' }}
+    <span class="text-muted">{{ bag.teaser  | remove: '<p>' | remove: '</p>' }}</span>
   </h2>
-  <h4>{{ post.date | date_to_rfc822 }} {{ post.author }}</h4>
-  <p class="lead">{{ post.content | remove: '<p>' | remove: '</p>' }}</p>
+  <h4>{{ bag.date | date_to_rfc822 }} {{ bag.author }}</h4>
+  <p class="lead">{{ bag.content | remove: '<p>' | remove: '</p>' }}</p>
 </div>
 
 <hr class="featurette-divider">
