@@ -4,6 +4,8 @@ permalink: /:year/:month/:day/:title.html
 name: brown-bag.net - Feed your brain
 description: A virtual conference held as brown-bags
 url: http://www.brown-bag.net
+repository: https://github.com/brown-bag/brown-bag.github.com
+edit-path: https://github.com/brown-bag/brown-bag.github.com/edit/master
 
 slogantitle: Feed your brain
 slogansubtitle: Eat, learn and enjoy
