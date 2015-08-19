@@ -1,82 +1,9 @@
-<hr class="featurette-divider">
+{% include subscribe-content.html %}
 
-<div class="featurette" id="subscribe">
-  <h2 class="featurette-heading">Subscribe
-    <span class="text-muted">Eater and/or a feeder?</span>
-  </h2>
-  <p class="lead">
-    <form action="//brown-bag.us11.list-manage.com/subscribe/post?u=01faea0960af3a22f345f25c0&amp;id=882a21f857" method="post"
-    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-inline" target="_blank" novalidate>
-    <div class="form-group">
-      <label for="mce-EMAIL" class="sr-only">Email for subscribing</label>
-      <input type="email" value="" name="EMAIL" class="form-control input-lg" id="mce-EMAIL" placeholder="email address" required>
-    </div>
-    <div class="form-group">
-      <label for="mce-group[6625]-6625-0" class="checkbox-inline" style="font-size: 16px">Eater</label>
-      <input type="checkbox" value="1" name="group[6625][1]" id="mce-group[6625]-6625-0" checked data-on-color="info" data-size="large">
-    </div>
-    <div class="form-group">
-      <label for="mce-group[6625]-6625-1" class="checkbox-inline" style="font-size: 16px">Feeder</label>
-      <input type="checkbox" value="2" name="group[6625][2]" id="mce-group[6625]-6625-1" data-on-color="info" data-size="large">
-    </div>
-    <div class="form-group">
-      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-      <div style="position: absolute; left: -5000px;"><input type="text" name="b_01faea0960af3a22f345f25c0_882a21f857" tabindex="-1" value=""></div>
-      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-info btn-lg" style="margin-left: 20px">
-    </div>
-  </form>
-</p>
-</div>
+{% include inshort-content.html %}
 
-<hr class="featurette-divider">
+{% include eater-content.html %}
 
-<div class="featurette" id="inshort">
-  <img class="featurette-image img-circle img-responsive pull-right" src="img/just-a-bag.svg">
-  <h2 class="featurette-heading">This is your bag
-    <span class="text-muted">It feeds your brain while you eat. Teach, learn and enjoy!</span>
-  </h2>
-  <p class="lead">Brown-bag is a short, thirty minutes, session which happens during your lunch break. It is your community-, pull-request- and open-source-driven unconference. The only thing which is predefined is the timeslots brown-bag will happen. Everything else is totally community-driven. If you feel we need additional slots or you would like to change how this uncoference works then get the discussion started. <a href="#eater">Eat</a> your food or <a href="#feeder">feed</a> others, get your bag now!</p>
-</div>
+{% include feeder-content.html %}
 
-<hr class="featurette-divider">
-
-<div class="featurette" id="eater">
-  <img class="featurette-image img-circle img-responsive pull-right" src="img/eater.svg">
-  <h2 class="featurette-heading">I like to eat
-    <span class="text-muted">Subscribe to a brown-bag session, learn and enjoy!</span>
-  </h2>
-  <p class="lead">Nothing simpler than that. Pick an already announced brown-bag session from the schedule, get yourself some nice and delicous food (hopefully in a brown-bag), make yourself comfortable in front of your screen or share it with your co-workers on a large screen and live-cast it into your office. Be sure to interact with your brown-bag friends all over the world by writing questions and comments in the screen-cast area and/or live tweet with the <a href="https://twitter.com/hashtag/brownbag">#brownbag</a> hashtag. But don't just lean back in your seats. Get involved and <a href="#feeder">feed others</a> by hosting your brown-bag session!</p>
-</div>
-
-<hr class="featurette-divider">
-
-<div class="featurette" id="feeder">
-  <img class="featurette-image img-circle img-responsive pull-right" src="img/feeder.svg">
-  <h2 class="featurette-heading">I like to feed
-    <span class="text-muted">Your brown-bag session is just a pull-request away.</span>
-  </h2>
-  <p class="lead">Open up a pull-request for an available slot, promote it, when it gets more vote than other pull-request for a given slot it gets merged and the slot is yours. Knock your audience out with your content! All you need is a good internet connection, a decent headset or microphone, an interesting topic which gets upvoted by the community, an hour on the brown-bag day and a little bit of courage. Don't worry, we are a friendly community! Host a brown-bag session now, teach and enjoy!</p>
-</div>
-
-<hr class="featurette-divider" id="bags">
-
-{% assign posts = site.posts | where: "archive", false %}
-{% for post in posts %}
-<div class="featurette" id="{{ post.title | slugify }}">
-  <img class="featurette-image img-circle img-responsive pull-right" src="{{ post.author-pic }}">
-  <h2 class="featurette-heading">{{ post.title | remove: '<p>' | remove: '</p>' }}
-    <span class="text-muted">{{ post.teaser  | remove: '<p>' | remove: '</p>' }}</span>
-  </h2>
-  <h4>{{ post.date | date_to_rfc822 }} {{ post.author }}</h4>
-  <p class="lead">{{ post.content | remove: '<p>' | remove: '</p>' }}</p>
-  {% if post.slot == true %}
-  <form action="https://github.com/brown-bag/brown-bag.github.com/edit/master/{{ post.path }}">
-    <button type="submit" class="btn btn-info btn-lg">
-      <span class="glyphicon glyphicon-check" aria-hidden="true"></span> Submit for this slot
-    </button>
-  </form>
-  {% endif %}
-</div>
-
-<hr class="featurette-divider">
-{% endfor %}
+{% include bags-content.html %}
