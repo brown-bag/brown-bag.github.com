@@ -1,3 +1,5 @@
+---
+---
 /*!
  * Start Bootstrap - One Page Wonder HTML Template (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -12,7 +14,7 @@ body {
     display: block;
     width: 100%;
     text-align: center;
-    background-image: url('../img/bag-background-700x500.svg'), url('../img/bag-background-repeat-x.png');
+    background-image: url('{{ site.baseurl }}/img/bag-background-700x500.svg'), url('{{ site.baseurl }}/img/bag-background-repeat-x.png');
     background-size: contain, contain;
     background-repeat: no-repeat, repeat-x;
     background-position: left, left;
