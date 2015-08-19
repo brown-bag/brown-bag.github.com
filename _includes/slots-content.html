@@ -1,0 +1,21 @@
+<div class="page-header" id="slots">
+  <h1>Slots <small>Submit, now!</small></h1>
+</div>
+{% assign slots = site.posts | where: "archive", false | where: "slot", true %}
+{% for slot in slots %}
+<div class="featurette" id="{{ slot.title | slugify }}">
+  <img class="featurette-image img-circle img-responsive pull-right" src="{{ slot.author-pic }}">
+  <h2 class="featurette-heading">{{ slot.title | remove: '<p>' | remove: '</p>' }}
+    <span class="text-muted">{{ slot.teaser  | remove: '<p>' | remove: '</p>' }}</span>
+  </h2>
+  <h4>{{ slot.date | date_to_rfc822 }} {{ post.author }}</h4>
+  <p class="lead">{{ slot.content | remove: '<p>' | remove: '</p>' }}</p>
+  <form action="{{ site.edit-path }}/{{ slot.path }}">
+    <button type="submit" class="btn btn-info btn-lg">
+      <span class="glyphicon glyphicon-check" aria-hidden="true"></span> Submit for this slot
+    </button>
+  </form>
+</div>
+
+<hr class="featurette-divider">
+{% endfor %}
