@@ -1,21 +1,15 @@
-<hr class="featurette-divider" id="bags">
-
-{% assign posts = site.posts | where: "archive", false %}
-{% for post in posts %}
-<div class="featurette" id="{{ post.title | slugify }}">
-  <img class="featurette-image img-circle img-responsive pull-right" src="{{ post.author-pic }}">
-  <h2 class="featurette-heading">{{ post.title | remove: '<p>' | remove: '</p>' }}
-    <span class="text-muted">{{ post.teaser  | remove: '<p>' | remove: '</p>' }}</span>
+<div class="page-header" id="bags">
+  <h1>Bags <small>Subscribe, now!</small></h1>
+</div>
+{% assign bags = site.posts | where: "archive", false | where: "slot", false %}
+{% for bag in bags %}
+<div class="featurette" id="{{ bag.title | slugify }}">
+  <img class="featurette-image img-circle img-responsive pull-right" src="{{ bag.author-pic }}">
+  <h2 class="featurette-heading">{{ bag.title | remove: '<p>' | remove: '</p>' }}
+    <span class="text-muted">{{ bag.teaser  | remove: '<p>' | remove: '</p>' }}</span>
   </h2>
-  <h4>{{ post.date | date_to_rfc822 }} {{ post.author }}</h4>
-  <p class="lead">{{ post.content | remove: '<p>' | remove: '</p>' }}</p>
-  {% if post.slot == true %}
-  <form action="https://github.com/brown-bag/brown-bag.github.com/edit/master/{{ post.path }}">
-    <button type="submit" class="btn btn-info btn-lg">
-      <span class="glyphicon glyphicon-check" aria-hidden="true"></span> Submit for this slot
-    </button>
-  </form>
-  {% endif %}
+  <h4>{{ bag.date | date_to_rfc822 }} {{ bag.author }}</h4>
+  <p class="lead">{{ bag.content | remove: '<p>' | remove: '</p>' }}</p>
 </div>
 
 <hr class="featurette-divider">
