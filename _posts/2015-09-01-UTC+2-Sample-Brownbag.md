@@ -4,7 +4,7 @@ layout: default
 permalink: "/2015/09/01/Sample-Brownbag.html"
 date: '2015-09-01 11:30:00 +0200'
 archive: false
-slot: true
+slot: false
 # To be filled out by you
 # Short an descriptive title
 title: Your Brownbag
@@ -26,4 +26,4 @@ github: http://github.com/hansmuster
 # Your homepage or blog
 homepage:
 ---
-This is an available slot. Submit a proposal, now!
+Testing proposal
