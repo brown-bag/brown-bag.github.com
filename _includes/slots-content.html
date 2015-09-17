@@ -8,7 +8,7 @@
   <h2 class="featurette-heading">{{ slot.title | remove: '<p>' | remove: '</p>' }}
     <span class="text-muted">{{ slot.teaser  | remove: '<p>' | remove: '</p>' }}</span>
   </h2>
-  <h4>{{ slot.date | date_to_rfc822 }} {{ post.author }}</h4>
+  <h4>{{ slot.date | date_to_rfc822 }} {{ slot.author }}</h4>
   <p class="lead">{{ slot.content | remove: '<p>' | remove: '</p>' }}</p>
   <form action="{{ site.edit-path }}/{{ slot.path }}">
     <button type="submit" class="btn btn-info btn-lg">
