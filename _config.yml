@@ -5,6 +5,7 @@ name: brown-bag.net - Feed your brain
 description: A virtual conference held as brown-bags
 baseurl: "http://www.brown-bag.net"
 repository: "https://github.com/brown-bag/brown-bag.github.com"
+view-path: "https://github.com/brown-bag/brown-bag.github.com/blob/master"
 edit-path: "https://github.com/brown-bag/brown-bag.github.com/edit/master"
 
 slogantitle: Feed your brain
