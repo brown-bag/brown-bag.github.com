@@ -20,10 +20,10 @@ author: Hans Muster
 # URI to a picture of you should be at 250x250
 author-pic:
 # Your twitter handle (leave out if you don't want to provide it)
-twitter: hansmuster
+twitter: danielmarbach
 # Link to your github account
-github: http://github.com/hansmuster
+github: http://github.com/danielmarbach
 # Your homepage or blog
 homepage:
 ---
-This is an available slot. Submit a proposal, now!
+This is my proposal!
