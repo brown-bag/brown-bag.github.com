@@ -1,8 +1,9 @@
 <div class="page-header" id="bags">
   <h1>Bags <small>Subscribe, now!</small></h1>
 </div>
-{% assign bags = site.posts | where: "archive", false | where: "slot", false %}
+{% assign bags = site.posts | where: "archive", false %}
 {% for bag in bags %}
+{% if bag.event != "" %}
 <div class="featurette" id="{{ bag.title | slugify }}">
   <img class="featurette-image img-circle img-responsive pull-right" src="{{ bag.author-pic }}">
   <h2 class="featurette-heading">{{ bag.title | remove: '<p>' | remove: '</p>' }}
@@ -19,4 +20,5 @@
 </div>
 
 <hr class="featurette-divider">
+{% endif %}
 {% endfor %}

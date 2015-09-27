@@ -1,7 +1,7 @@
 <div class="page-header" id="slots">
   <h1>Slots <small>Submit, now!</small></h1>
 </div>
-{% assign slots = site.posts | where: "archive", false | where: "slot", true %}
+{% assign slots = site.posts | where: "archive", false | where: "event", "" %}
 {% for slot in slots %}
 <div class="featurette" id="{{ slot.title | slugify }}">
   <img class="featurette-image img-circle img-responsive pull-right" src="{{ site.baseurl }}/img/slot.svg">
