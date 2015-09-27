@@ -1,10 +1,10 @@
 ---
 # Don't touch this ;)
-layout: default
-permalink: "/2015/09/01/Sample-Brownbag.html"
+layout: single
+permalink: "/2015/09/01/Sample-Brownbag"
 date: '2015-09-01 11:30:00 +0200'
 archive: false
-slot: true
+event: ""
 # To be filled out by you
 # Short an descriptive title
 title: Your Brownbag
@@ -24,6 +24,6 @@ twitter: hansmuster
 # Link to your github account
 github: http://github.com/hansmuster
 # Your homepage or blog
-homepage:
+homepage: http://www.hansmuster.com
 ---
 This is an available slot. Submit a proposal, now!
