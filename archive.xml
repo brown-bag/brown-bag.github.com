@@ -6,7 +6,7 @@
 		<title>{{ site.name | xml_escape }}</title>
 		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
 		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/bags.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="{{ site.url }}/archive.xml" rel="self" type="application/rss+xml" />
     {% assign bags = site.posts | where: "archive", true %}
     {% for bag in bags %}
 			<item>
