@@ -1,0 +1,29 @@
+<hr class="featurette-divider">
+
+<div class="featurette" id="{{ page.title | slugify }}">
+  <img class="featurette-image img-circle img-responsive pull-right" src="{{ page.author-pic }}">
+  <h2 class="featurette-heading">{{ page.title | remove: '<p>' | remove: '</p>' }}
+    <span class="text-muted">{{ page.teaser  | remove: '<p>' | remove: '</p>' }}</span>
+  </h2>
+  <h4>{{ page.date | date_to_rfc822 }} {{ page.author }}</h4>
+  <p class="lead">{{ page.content | remove: '<p>' | remove: '</p>' }}</p>
+  {% for tag in page.tags %} {{ tag }} {% endfor %}
+  <p>
+    {% if page.event == "" and page.archive == false %}
+    <form action="{{ site.edit-path }}/{{ page.path }}">
+      <button type="submit" class="btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-check" aria-hidden="true"></span> Submit for this slot
+      </button>
+    </form>
+    {% elsif page.event != "" and page.archive == false %}
+    <form action="{{ page.event }}">
+      <button type="submit" class="btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Attend this session
+      </button>
+    </form>
+    {% endif %}
+  </p>
+
+</div>
+
+<hr class="featurette-divider">
