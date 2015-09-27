@@ -1,5 +1,5 @@
 <div class="page-header" id="bags">
-  <h1>Bags <small>Subscribe, now!</small></h1>
+  <h1>Bags <small>Attend, now!</small></h1>
 </div>
 {% assign bags = site.posts | where: "archive", false %}
 {% for bag in bags %}
@@ -12,11 +12,13 @@
   <h4>{{ bag.date | date_to_rfc822 }} {{ bag.author }}</h4>
   <p class="lead">{{ bag.content | remove: '<p>' | remove: '</p>' }}</p>
   {% for tag in bag.tags %} {{ tag }} {% endfor %}
-  <form action="{{ bag.event }}">
-    <button type="submit" class="btn btn-info btn-lg">
-      <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Attend this session
-    </button>
-  </form>
+  <p>
+    <form action="{{ bag.event }}">
+      <button type="submit" class="btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Attend this session
+      </button>
+    </form>
+  </p>
 </div>
 
 <hr class="featurette-divider">
