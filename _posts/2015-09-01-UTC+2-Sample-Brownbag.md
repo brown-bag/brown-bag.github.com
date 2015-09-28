@@ -4,7 +4,7 @@ layout: single
 permalink: "/2015/09/01/Sample-Brownbag"
 date: '2015-09-01 11:30:00 +0200'
 archive: false
-event: ""
+event: "http://adsfadsf"
 # To be filled out by you
 # Short an descriptive title
 title: Your Brownbag
