@@ -8,7 +8,7 @@
   <h2 class="featurette-heading">{{ slot.title | remove: '<p>' | remove: '</p>' }}
     <span class="text-muted">{{ slot.teaser  | remove: '<p>' | remove: '</p>' }}</span>
   </h2>
-  <h4>{{ slot.date | date_to_rfc822 }}</h4>
+  <h4><script>document.write(new Date('{{ slot.date }}').toString());</script></h4>
   <p class="lead">{{ slot.content | remove: '<p>' | remove: '</p>' }}</p>
   <p>
     <form action="{{ site.edit-path }}/{{ slot.path }}">

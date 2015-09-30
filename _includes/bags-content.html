@@ -9,7 +9,7 @@
   <h2 class="featurette-heading">{{ bag.title | remove: '<p>' | remove: '</p>' }}
     <span class="text-muted">{{ bag.teaser  | remove: '<p>' | remove: '</p>' }}</span>
   </h2>
-  <h4>{{ bag.date | date_to_rfc822 }} {{ bag.author }}</h4>
+  <h4><script>document.write(new Date('{{ bag.date }}').toString());</script> {{ bag.author }}</h4>
   <p class="lead">{{ bag.content | remove: '<p>' | remove: '</p>' }}</p>
   {% for tag in bag.tags %} {{ tag }} {% endfor %}
   <p>
