@@ -11,7 +11,7 @@
   <h4><script>document.write(new Date('{{ slot.date }}').toString());</script></h4>
   <p class="lead">{{ slot.content | remove: '<p>' | remove: '</p>' }}</p>
   <p>
-    <form action="{{ site.edit-path }}/{{ slot.path }}">
+    <form action="{{ site.edit-path }}/{{ slot.path }}" target="_blank">
       <button type="submit" class="btn btn-info btn-lg">
         <span class="glyphicon glyphicon-check" aria-hidden="true"></span> Submit for this slot
       </button>
