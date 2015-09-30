@@ -8,9 +8,9 @@ You would like to be a feeder? Nothing simpler than that!
 
 ## Step by step how to submit
 1. Find an active slot which suits your agenda
-1. Click on `Submit for this slot`
-1. Enter your proposal
-1. Send the pull request
+1. Click on ![Submit for this slot button](submit_button.png)
+1. Enter your proposal with [Markdown](https://help.github.com/articles/github-flavored-markdown/)
+1. Send the [pull request](https://help.github.com/articles/using-pull-requests/)
 1. Make noise in the community to promote your PR
 
 ## Sessions
