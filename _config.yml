@@ -10,3 +10,9 @@ edit-path: "https://github.com/brown-bag/brown-bag.github.com/edit/master"
 
 slogantitle: Feed your brain
 slogansubtitle: Eat, learn and enjoy
+
+thanks:
+  - name: Adam Ralph
+    link: "http://adamralph.com"
+  - name: David Boike
+    link: "http://www.make-awesome.com"
