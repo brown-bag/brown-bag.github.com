@@ -8,7 +8,20 @@
   <h2 class="featurette-heading">{{ slot.title | remove: '<p>' | remove: '</p>' }}
     <span class="text-muted">{{ slot.teaser  | remove: '<p>' | remove: '</p>' }}</span>
   </h2>
-  <h4><script>document.write(new Date('{{ slot.date }}').toString());</script></h4>
+  <h4>
+    <div title="Add to Calendar" class="addthisevent">
+        <img src="{{ site.baseurl }}/img/gfx/icon-calendar-t1.png" alt="" />
+        <span class="start">{{ slot.date }</span>
+        <span class="end">{{ slot.date }}</span>
+        <span class="timezone">{{ slot.timezone }}</span>
+        <span class="title">{{ slot.title }}</span>
+        <span class="description">{{ slot.content }}</span>
+        <span class="location">http://www.brownbag.net<span>
+        <span class="all_day_event">false</span>
+        <span class="date_format">YYYY-MM-DD</span>
+    </div>
+    <script>document.write(new Date('{{ slot.date }}').toString());</script>
+  </h4>
   <p class="lead">{{ slot.content | remove: '<p>' | remove: '</p>' }}</p>
   <p>
     <form action="{{ site.edit-path }}/{{ slot.path }}" target="_blank">
@@ -16,6 +29,8 @@
         <span class="glyphicon glyphicon-check" aria-hidden="true"></span> Submit for this slot
       </button>
     </form>
+
+
   </p>
 </div>
 

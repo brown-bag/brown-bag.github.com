@@ -9,7 +9,20 @@
   <h2 class="featurette-heading">{{ bag.title | remove: '<p>' | remove: '</p>' }}
     <span class="text-muted">{{ bag.teaser  | remove: '<p>' | remove: '</p>' }}</span>
   </h2>
-  <h4><script>document.write(new Date('{{ bag.date }}').toString());</script></h4>
+  <h4>
+    <div title="Add to Calendar" class="addthisevent">
+        <img src="{{ site.baseurl }}/img/gfx/icon-calendar-t1.png" alt="" />
+        <span class="start">{{ bag.date }</span>
+        <span class="end">{{ bag.date }}</span>
+        <span class="timezone">{{ bag.timezone }}</span>
+        <span class="title">{{ bag.title }}</span>
+        <span class="description">{{ bag.content }}</span>
+        <span class="location">{{ bag.event }}span>
+        <span class="all_day_event">false</span>
+        <span class="date_format">YYYY-MM-DD</span>
+    </div>
+    <script>document.write(new Date('{{ bag.date }}').toString());</script>
+  </h4>
   <h5>{{ bag.author }} <a href="https://www.twitter.com/{{ bag.twitter }}" target="_blank"><img src="{{ site.baseurl }}/img/twitter.png"></a> <a href="https://www.github.com/{{ bag.github }}" target="_blank"><img src="{{ site.baseurl }}/img/github.png"></a> <a href="{{ bag.homepage }}" target="_blank"><img src="{{ site.baseurl }}/img/homepage.png"></a></h5>
   <p class="lead">{{ bag.content | remove: '<p>' | remove: '</p>' }}</p>
   {% for tag in bag.tags %} {{ tag }} {% endfor %}
