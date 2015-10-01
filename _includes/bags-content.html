@@ -12,8 +12,8 @@
   <h4>
     <div title="Add to Calendar" class="addthisevent">
         <img src="{{ site.baseurl }}/img/gfx/icon-calendar-t1.png" alt="" />
-        <span class="start">{{ bag.start }}</span>
-        <span class="end">{{ bag.end }}</span>
+        <span class="start">{{ bag.start | date: "%Y-%m-%d %H:%M" }}</span>
+        <span class="end">{{ bag.end | date: "%Y-%m-%d %H:%M" }}</span>
         <span class="timezone">{{ bag.timezone }}</span>
         <span class="title">{{ bag.title }}</span>
         <span class="description">{{ bag.content }}</span>
@@ -21,7 +21,7 @@
         <span class="all_day_event">false</span>
         <span class="date_format">YYYY-MM-DD</span>
     </div>
-    <script>document.write(new Date('{{ bag.start }}').toString());</script>
+    <time datetime="{{ bag.start }}"><script>document.write(new Date('{{ bag.start }}').toString());</script></time>
   </h4>
   <h5>{{ bag.author }} <a href="https://www.twitter.com/{{ bag.twitter }}" target="_blank"><img src="{{ site.baseurl }}/img/twitter.png"></a> <a href="https://www.github.com/{{ bag.github }}" target="_blank"><img src="{{ site.baseurl }}/img/github.png"></a> <a href="{{ bag.homepage }}" target="_blank"><img src="{{ site.baseurl }}/img/homepage.png"></a></h5>
   <p class="lead">{{ bag.content | remove: '<p>' | remove: '</p>' }}</p>

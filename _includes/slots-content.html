@@ -11,8 +11,8 @@
   <h4>
     <div title="Add to Calendar" class="addthisevent">
         <img src="{{ site.baseurl }}/img/gfx/icon-calendar-t1.png" alt="" />
-        <span class="start">{{ slot.start }}</span>
-        <span class="end">{{ slot.end }}</span>
+        <span class="start">{{ slot.start | date: "%Y-%m-%d %H:%M" }}</span>
+        <span class="end">{{ slot.end | date: "%Y-%m-%d %H:%M" }}</span>
         <span class="timezone">{{ slot.timezone }}</span>
         <span class="title">{{ slot.title }}</span>
         <span class="description">{{ slot.content }}</span>
@@ -20,7 +20,7 @@
         <span class="all_day_event">false</span>
         <span class="date_format">YYYY-MM-DD</span>
     </div>
-    <script>document.write(new Date('{{ slot.start }}').toString());</script>
+    <time datetime="{{ slot.start }}"><script>document.write(new Date('{{ slot.start }}').toString());</script></time>
   </h4>
   <p class="lead">{{ slot.content | remove: '<p>' | remove: '</p>' }}</p>
   <p>
