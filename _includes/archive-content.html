@@ -6,7 +6,8 @@
   <h2 class="featurette-heading">{{ bag.title | remove: '<p>' | remove: '</p>' }}
     <span class="text-muted">{{ bag.teaser  | remove: '<p>' | remove: '</p>' }}</span>
   </h2>
-  <h4>{{ bag.date | date_to_rfc822 }} {{ bag.author }}</h4>
+  <h4><script>document.write(new Date('{{ bag.start }}').toString());</script></h4>
+  <h5>{{ bag.author }} <a href="https://www.twitter.com/{{ bag.twitter }}" target="_blank"><img src="{{ site.baseurl }}/img/twitter.png"></a> <a href="https://www.github.com/{{ bag.github }}" target="_blank"><img src="{{ site.baseurl }}/img/github.png"></a> <a href="{{ bag.homepage }}" target="_blank"><img src="{{ site.baseurl }}/img/homepage.png"></a></h5>
   <p class="lead">{{ bag.content | remove: '<p>' | remove: '</p>' }}</p>
   {% for tag in bag.tags %} {{ tag }} {% endfor %}
 </div>

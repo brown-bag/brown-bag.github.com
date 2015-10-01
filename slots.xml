@@ -13,7 +13,7 @@
 				<title>A new slot is available.</title>
 				<dc:creator>The brown bag community</dc:creator>
 				<description>This is an available slot. Submit a proposal, now!</description>
-				<pubDate>{{ slot.date | date_to_rfc822 }}</pubDate>
+				<pubDate>{{ slot.start | date_to_rfc822 }}</pubDate>
 				<link>{{ site.url }}{{ slot.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ slot.url }}</guid>
 			</item>
