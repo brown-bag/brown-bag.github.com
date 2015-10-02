@@ -20,7 +20,7 @@
         <span class="date_format">YYYY-MM-DD</span>
         <span class="location">http://www.brownbag.net<span>
     </div>
-    <time datetime="{{ slot.start }}"><script>document.write(new Date('{{ slot.start }}').toString());</script></time>
+    <time datetime="{{ slot.start | date: "%Y-%m-%dT%H:%M%z" }}"><script>document.write(new Date('{{ slot.start | date: "%Y-%m-%dT%H:%M%z" }}').toString());</script></time>
   </h4>
   <p class="lead">{{ slot.content | remove: '<p>' | remove: '</p>' }}</p>
   <p>
