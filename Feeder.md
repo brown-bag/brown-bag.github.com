@@ -13,6 +13,8 @@ You would like to be a feeder? Nothing simpler than that!
 1. Send the [pull request](https://help.github.com/articles/using-pull-requests/)
 1. Make noise in the community to promote your PR
 
+Note: The PRs get merged approximately one week before the slot date. This should give you enough time for preparation.
+
 ## Sessions
 * The session should be no longer than thirty minutes plus fifteen minutes for Q&A
 * Session proposals should be related to information technology, the tech industry or topics around it like
