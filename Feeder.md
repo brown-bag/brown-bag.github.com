@@ -21,4 +21,4 @@ Note: The PRs get merged approximately one week before the slot date. This shoul
  * Soft skills
  * Remote working
  * ...
-* We don't accept any kind of harassing content.
+* We don't accept any kind of harassing content. Be sure to read our [Code of Conduct](CONTRIBUTING.md)
