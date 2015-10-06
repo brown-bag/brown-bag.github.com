@@ -11,7 +11,7 @@
   <h4>
     <div title="Add to Calendar" class="addthisevent">
         <img src="{{ site.baseurl }}/img/gfx/icon-calendar-t1.png" alt="" />
-        <span class="start">{{ slot.start | date: "%Y+%m-%d %H:%M" }}</span>
+        <span class="start">{{ slot.start | date: "%Y-%m-%d %H:%M" }}</span>
         <span class="end">{{ slot.end | date: "%Y-%m-%d %H:%M" }}</span>
         <span class="timezone">{{ slot.timezone }}</span>
         <span class="title">{{ slot.title }}</span>
