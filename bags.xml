@@ -11,9 +11,9 @@
     {% for bag in bags %}
     {% if bag.event != "" %}
 			<item>
-				<title>{{ bag.title }}</title>
-				<dc:creator>{{ bag.author }}</dc:creator>
-				<description>{{ bag.content }}</description>
+				<title>{{ bag.title | xml_escape }}</title>
+				<dc:creator>{{ bag.author | xml_escape }}</dc:creator>
+				<description>{{ bag.content | xml_escape }}</description>
 				<pubDate>{{ bag.start | date_to_rfc822 }}</pubDate>
 				<link>{{ site.url }}{{ bag.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ bag.url }}</guid>
