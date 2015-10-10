@@ -2,7 +2,6 @@
 # Don't touch this ;)
 layout: single
 permalink: "/2015/10/13/in-the-mood-for-http"
-timezone: "America/Los_Angeles"
 start: '2015-10-13 12:00:00 -0700'
 end: '2015-10-13 12:45:00 -0700'
 archive: false

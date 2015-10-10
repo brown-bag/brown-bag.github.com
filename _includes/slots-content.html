@@ -9,7 +9,17 @@
     <span class="text-muted">{{ slot.teaser  | remove: '<p>' | remove: '</p>' }}</span>
   </h2>
   <h4>
-    <time datetime="{{ slot.start | date: "%Y-%m-%dT%H:%M%:z" }}"><script>document.write(new Date('{{ slot.start | date: "%Y-%m-%dT%H:%M%:z" }}').toString());</script></time>
+    <div title="Add to Calendar" class="addthisevent">
+        <img src="{{ site.baseurl }}/img/gfx/icon-calendar-t1.png" alt="" />
+        <span class="start eventTime" data-date="{{ slot.start | date: "%Y-%m-%dT%H:%M%:z" }}"></span>
+        <span class="end eventTime" data-date="{{ slot.end | date: "%Y-%m-%dT%H:%M%:z" }}"></span>
+        <span class="title">{{ slot.title }}</span>
+        <span class="description">{{ slot.content }}</span>
+        <span class="all_day_event">false</span>
+        <span class="date_format">YYYY-MM-DD</span>
+        <span class="location">{{ slot.event }}</span>
+    </div>
+    <time datetime="{{ slot.start | date: "%Y-%m-%dT%H:%M%:z" }}"></time>
   </h4>
   <p class="lead">{{ slot.content | remove: '<p>' | remove: '</p>' }}</p>
   <p>

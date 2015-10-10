@@ -6,11 +6,33 @@
 
 <script src="{{ site.baseurl }}/js/bootstrap-switch.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+
 <!-- Bootstrap switch for the mailchimp buttons -->
 <script>
     $(document).ready(function() {
       $("[name='group[6625][1]']").bootstrapSwitch();
       $("[name='group[6625][2]']").bootstrapSwitch();
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+      $(".eventTime").each(function() {
+          var dateTimeElement = $(this);
+          var rawDateTime = dateTimeElement.data('date');
+          var dateTime = moment(rawDateTime, 'YYYY-MM-DDTHH:mmZ').format('YYYY-MM-DD HH:mm');
+          dateTimeElement.text(dateTime);
+      });
+    });
+
+    $(document).ready(function() {
+      $("time[datetime]").each(function() {
+          var dateTimeElement = $(this);
+          var rawDateTime = dateTimeElement.attr('datetime');
+          var dateTime = moment(rawDateTime, 'YYYY-MM-DDTHH:mmZ').format('LLLL');
+          dateTimeElement.text(dateTime);
+      });
     });
 </script>
 
