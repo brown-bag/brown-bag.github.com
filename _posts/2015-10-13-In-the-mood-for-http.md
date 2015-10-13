@@ -1,12 +1,11 @@
 ---
 # Don't touch this ;)
 layout: single
-permalink: "/2015/10/13/UTC-07-Slot"
-timezone: "America/Los_Angeles"
+permalink: "/2015/10/13/in-the-mood-for-http"
 start: '2015-10-13 12:00:00 -0700'
 end: '2015-10-13 12:45:00 -0700'
-archive: false
-event: ""
+archive: true
+event: "https://youtu.be/Humi9prVSF0"
 # To be filled out by you
 # Short an descriptive title
 title: In The Mood For HTTP
@@ -14,7 +13,8 @@ title: In The Mood For HTTP
 teaser:
 # Tags
 tags:
-- slot
+- HTTP
+- API
 # Your name
 author: "Glenn Block & Darrel Miller"
 # URI to a picture of you should be at 250x250
