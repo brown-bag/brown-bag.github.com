@@ -34,6 +34,12 @@
         <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Attend this session
       </button>
     </form>
+    {% elsif page.event != "" and page.archive == true %}
+    <form action="{{ bag.event }}" target="_blank">
+      <button type="submit" class="btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-film" aria-hidden="true"></span> Watch recording
+      </button>
+    </form>
     {% endif %}
   </p>
 
