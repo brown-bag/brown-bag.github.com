@@ -1,7 +1,7 @@
 ---
 # Don't touch this ;)
 layout: single
-permalink: "/2015/10/26/in-the-mood-for-http"
+permalink: "/2015/10/26/in-the-mood-for-http-3"
 start: '2015-10-26 12:00:00 -0700'
 end: '2015-10-26 12:45:00 -0700'
 archive: true
