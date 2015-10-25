@@ -1,0 +1,3 @@
+<h5>{{ include.bag.author }} <a href="https://www.twitter.com/{{ include.bag.twitter }}" target="_blank"><img src="{{ site.baseurl }}/img/twitter.png"></a> <a href="https://www.github.com/{{ include.bag.github }}" target="_blank"><img src="{{ site.baseurl }}/img/github.png"></a> <a href="{{ include.bag.homepage }}" target="_blank"><img src="{{ site.baseurl }}/img/homepage.png"></a></h5>
+<p class="lead">{{ include.bag.content | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+{% for tag in include.bag.tags %} {{ tag }} {% endfor %}

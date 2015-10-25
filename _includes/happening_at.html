@@ -1,0 +1,13 @@
+<h4>
+  <div title="Add to Calendar" class="addthisevent">
+      <img src="{{ site.baseurl }}/img/gfx/icon-calendar-t1.png" alt="" />
+      <span class="start eventTime" data-date="{{ include.bag.start | date: "%Y-%m-%dT%H:%M%:z" }}"></span>
+      <span class="end eventTime" data-date="{{ include.bag.end | date: "%Y-%m-%dT%H:%M%:z" }}"></span>
+      <span class="title">{{ include.bag.title }}</span>
+      <span class="description">{{ include.bag.content }}</span>
+      <span class="all_day_event">false</span>
+      <span class="date_format">MM-DD-YYYY</span>
+      <span class="location">{{ include.bag.event }}</span>
+  </div>
+  <time datetime="{{ include.bag.start | date: "%Y-%m-%dT%H:%M%:z" }}"></time>
+</h4>

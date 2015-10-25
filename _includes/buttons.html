@@ -1,0 +1,21 @@
+<p>
+  {% if include.bag.event == "" and include.bag.archive == false %}
+  <form action="{{ site.edit-path }}/{{ include.bag.path }}" target="_blank">
+    <button type="submit" class="btn btn-info btn-lg">
+      <span class="glyphicon glyphicon-check" aria-hidden="true"></span> Submit for this slot
+    </button>
+  </form>
+  {% elsif include.bag.event != "" and include.bag.archive == false %}
+  <form action="{{ include.bag.event }}" target="_blank">
+    <button type="submit" class="btn btn-info btn-lg">
+      <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Attend this session
+    </button>
+  </form>
+  {% elsif include.bag.event != "" and include.bag.archive == true %}
+  <form action="{{ include.bag.event }}" target="_blank">
+    <button type="submit" class="btn btn-info btn-lg">
+      <span class="glyphicon glyphicon-film" aria-hidden="true"></span> Watch recording
+    </button>
+  </form>
+  {% endif %}
+</p>
