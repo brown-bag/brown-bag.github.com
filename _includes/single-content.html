@@ -1,48 +1,10 @@
 <hr class="featurette-divider">
 
 <div class="featurette" id="{{ page.title | slugify }}">
-  <img class="featurette-image img-circle img-responsive pull-right" src="{{ page.author-pic }}">
-  <h2 class="featurette-heading">{{ page.title | remove: '<p>' | remove: '</p>' }}
-    <span class="text-muted">{{ page.teaser  | remove: '<p>' | remove: '</p>' }}</span>
-  </h2>
-  <h4>
-    <div title="Add to Calendar" class="addthisevent">
-        <img src="{{ site.baseurl }}/img/gfx/icon-calendar-t1.png" alt="" />
-        <span class="start eventTime" data-date="{{ page.start | date: "%Y-%m-%dT%H:%M%:z" }}"></span>
-        <span class="end eventTime" data-date="{{ page.end | date: "%Y-%m-%dT%H:%M%:z" }}"></span>
-        <span class="title">{{ page.title }}</span>
-        <span class="description">{{ page.content }}</span>
-        <span class="all_day_event">false</span>
-        <span class="date_format">YYYY-MM-DD</span>
-        <span class="location">{{ page.event }}</span>
-    </div>
-    <time datetime="{{ page.start | date: "%Y-%m-%dT%H:%M%:z" }}"><script>document.write(new Date('{{ page.start | date: "%Y-%m-%dT%H:%M%:z" }}').toString());</script></time>
-  </h4>
-  <h5>{{ page.author }} <a href="https://www.twitter.com/{{ page.twitter }}" target="_blank"><img src="{{ site.baseurl }}/img/twitter.png"></a> <a href="https://www.github.com/{{ page.github }}" target="_blank"><img src="{{ site.baseurl }}/img/github.png"></a> <a href="{{ page.homepage }}" target="_blank"><img src="{{ site.baseurl }}/img/homepage.png"></a></h5>
-  <p class="lead">{{ page.content | remove: '<p>' | remove: '</p>' }}</p>
-  {% for tag in page.tags %} {{ tag }} {% endfor %}
-  <p>
-    {% if page.event == "" and page.archive == false %}
-    <form action="{{ site.edit-path }}/{{ page.path }}" target="_blank">
-      <button type="submit" class="btn btn-info btn-lg">
-        <span class="glyphicon glyphicon-check" aria-hidden="true"></span> Submit for this slot
-      </button>
-    </form>
-    {% elsif page.event != "" and page.archive == false %}
-    <form action="{{ page.event }}" target="_blank">
-      <button type="submit" class="btn btn-info btn-lg">
-        <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Attend this session
-      </button>
-    </form>
-    {% elsif page.event != "" and page.archive == true %}
-    <form action="{{ bag.event }}" target="_blank">
-      <button type="submit" class="btn btn-info btn-lg">
-        <span class="glyphicon glyphicon-film" aria-hidden="true"></span> Watch recording
-      </button>
-    </form>
-    {% endif %}
-  </p>
-
+  {% include teaser.html bag=page %}
+  {% include happening_at.html bag=page %}
+  {% include bag-content.html bag=page %}
+  {% include buttons.html bag=page %}
 </div>
 
 <hr class="featurette-divider">

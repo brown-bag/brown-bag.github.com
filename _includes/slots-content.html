@@ -4,33 +4,10 @@
 {% assign slots = site.posts | where: "archive", false | where: "event", "" %}
 {% for slot in slots %}
 <div class="featurette" id="{{ slot.title | slugify }}">
-  <img class="featurette-image img-circle img-responsive pull-right" src="{{ site.baseurl }}/img/slot.svg">
-  <h2 class="featurette-heading">{{ slot.title | remove: '<p>' | remove: '</p>' }}
-    <span class="text-muted">{{ slot.teaser  | remove: '<p>' | remove: '</p>' }}</span>
-  </h2>
-  <h4>
-    <div title="Add to Calendar" class="addthisevent">
-        <img src="{{ site.baseurl }}/img/gfx/icon-calendar-t1.png" alt="" />
-        <span class="start eventTime" data-date="{{ slot.start | date: "%Y-%m-%dT%H:%M%:z" }}"></span>
-        <span class="end eventTime" data-date="{{ slot.end | date: "%Y-%m-%dT%H:%M%:z" }}"></span>
-        <span class="title">{{ slot.title }}</span>
-        <span class="description">{{ slot.content }}</span>
-        <span class="all_day_event">false</span>
-        <span class="date_format">YYYY-MM-DD</span>
-        <span class="location">{{ slot.event }}</span>
-    </div>
-    <time datetime="{{ slot.start | date: "%Y-%m-%dT%H:%M%:z" }}"></time>
-  </h4>
+  {% include teaser.html bag=slot %}
+  {% include happening_at.html bag=slot %}
   <p class="lead">{{ slot.content | remove: '<p>' | remove: '</p>' }}</p>
-  <p>
-    <form action="{{ site.edit-path }}/{{ slot.path }}" target="_blank">
-      <button type="submit" class="btn btn-info btn-lg">
-        <span class="glyphicon glyphicon-check" aria-hidden="true"></span> Submit for this slot
-      </button>
-    </form>
-
-
-  </p>
+  {% include buttons.html bag=slot %}
 </div>
 
 <hr class="featurette-divider">

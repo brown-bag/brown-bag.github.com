@@ -2,23 +2,12 @@
 {% assign bags = site.posts | where: "archive", true %}
 {% for bag in bags %}
 <div class="featurette" id="{{ bag.title | slugify }}">
-  <img class="featurette-image img-circle img-responsive pull-right" src="{{ bag.author-pic }}">
-  <h2 class="featurette-heading">{{ bag.title | remove: '<p>' | remove: '</p>' }}
-    <span class="text-muted">{{ bag.teaser  | remove: '<p>' | remove: '</p>' }}</span>
-  </h2>
+  {% include teaser.html bag=bag %}
   <h4>
     <time datetime="{{ bag.start | date: "%Y-%m-%dT%H:%M%:z" }}"></time>
   </h4>
-  <h5>{{ bag.author }} <a href="https://www.twitter.com/{{ bag.twitter }}" target="_blank"><img src="{{ site.baseurl }}/img/twitter.png"></a> <a href="https://www.github.com/{{ bag.github }}" target="_blank"><img src="{{ site.baseurl }}/img/github.png"></a> <a href="{{ bag.homepage }}" target="_blank"><img src="{{ site.baseurl }}/img/homepage.png"></a></h5>
-  <p class="lead">{{ bag.content | remove: '<p>' | remove: '</p>' }}</p>
-  {% for tag in bag.tags %} {{ tag }} {% endfor %}
-  <p>
-    <form action="{{ bag.event }}" target="_blank">
-      <button type="submit" class="btn btn-info btn-lg">
-        <span class="glyphicon glyphicon-film" aria-hidden="true"></span> Watch recording
-      </button>
-    </form>
-  </p>
+  {% include bag-content.html bag=bag %}
+  {% include buttons.html bag=bag %}
 </div>
 
 <hr class="featurette-divider">

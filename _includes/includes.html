@@ -21,7 +21,7 @@
       $(".eventTime").each(function() {
           var dateTimeElement = $(this);
           var rawDateTime = dateTimeElement.data('date');
-          var dateTime = moment(rawDateTime, 'YYYY-MM-DDTHH:mmZ').format('YYYY-MM-DD HH:mm');
+          var dateTime = moment(rawDateTime, 'YYYY-MM-DDTHH:mmZ').format('MM-DD-YYYY HH:mm');
           dateTimeElement.text(dateTime);
       });
     });

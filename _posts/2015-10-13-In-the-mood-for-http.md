@@ -10,7 +10,7 @@ event: "https://youtu.be/Humi9prVSF0"
 # Short an descriptive title
 title: In The Mood For HTTP
 # Tease the eaters so that they subscribe
-teaser:
+teaser: Episode 1
 # Tags
 tags:
 - HTTP
