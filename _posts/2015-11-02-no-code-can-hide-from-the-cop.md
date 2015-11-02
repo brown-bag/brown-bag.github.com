@@ -4,7 +4,7 @@ layout: single
 permalink: "/2015/11/02/no-code-can-hide-from-the-cop"
 start: '2015-11-02 12:00:00 +0100'
 end: '2015-11-02 12:45:00 +0100'
-archive: false
+archive: true
 event: "http://ccst.io/e/no-code-can-hide-from-the-cop"
 # To be filled out by you
 # Short an descriptive title
