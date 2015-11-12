@@ -1,23 +1,28 @@
 ---
 # Don't touch this ;)
 layout: single
-permalink: "/2015/11/18/UTC+1-Slot"
+permalink: "/2015/11/18/introduction-to-visual-studio-extensibility"
 start: '2015-11-18 12:00:00 +0100'
 end: '2015-11-18 12:45:00 +0100'
 archive: false
-event: ""
+event: "http://ccst.io/e/introduction-to-visual-studio-extensibility"
 # To be filled out by you
 # Short an descriptive title
 title: "Introduction to Visual Studio Extensibility"
 # Tease the eaters so that they subscribe
 teaser: "Demystifying the art of creating extensions for Visual Studio"
 # Tags
-tags: vsix visual studio extensibility roslyn vssdk sdk
-- "slot"
+tags:
+- "vsix"
+- "visual studio"
+- "extensibility"
+- "roslyn"
+- "vssdk"
+- "sdk"
 # Your name
 author: "Igal Tabachnik"
 # URI to a picture of you should be at 250x250
-author-pic: https://en.gravatar.com/userimage/4232377/f76768cfd2dc24160e26ff3fe4d57e61.jpg?size=250
+author-pic: "https://en.gravatar.com/userimage/4232377/f76768cfd2dc24160e26ff3fe4d57e61.jpg?size=250"
 # Your twitter handle (leave out if you don't want to provide it)
 twitter: "hmemcpy"
 # Your github account
