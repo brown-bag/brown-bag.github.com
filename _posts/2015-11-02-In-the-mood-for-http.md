@@ -2,10 +2,10 @@
 # Don't touch this ;)
 layout: single
 permalink: "/2015/11/02/in-the-mood-for-http"
-start: '2015-11-02 12:00:00 -0700'
-end: '2015-11-02 12:45:00 -0700'
+start: '2015-11-02 12:00:00 -0800'
+end: '2015-11-02 12:45:00 -0800'
 archive: false
-event: ""
+event: "http://ccst.io/e/in-the-mood-for-http-4"
 # To be filled out by you
 # Short an descriptive title
 title: In The Mood For HTTP
