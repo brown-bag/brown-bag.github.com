@@ -1,7 +1,7 @@
 <div class="page-header" id="slots">
   <h1>Slots <small>Submit, now!</small></h1>
 </div>
-{% assign slots = site.posts | where: "archive", false | where: "event", "" %}
+{% assign slots = site.posts | where: "archive", false | where: "event", "" | sort: "start" %}
 {% for slot in slots %}
 <div class="featurette" id="{{ slot.title | slugify }}">
   {% include teaser.html bag=slot %}
