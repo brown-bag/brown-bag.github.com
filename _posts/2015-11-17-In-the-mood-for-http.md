@@ -4,8 +4,8 @@ layout: single
 permalink: "/2015/11/17/in-the-mood-for-http"
 start: '2015-11-17 12:00:00 -0800'
 end: '2015-11-17 12:45:00 -0800'
-archive: false
-event: "http://ccst.io/e/in-the-mood-for-http-5"
+archive: true
+event: "https://youtu.be/lehvnbBS5eU"
 # To be filled out by you
 # Short an descriptive title
 title: In The Mood For HTTP
