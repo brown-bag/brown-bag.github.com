@@ -4,8 +4,8 @@ layout: single
 permalink: "/2015/11/18/introduction-to-visual-studio-extensibility"
 start: '2015-11-18 12:00:00 +0100'
 end: '2015-11-18 12:45:00 +0100'
-archive: false
-event: "http://ccst.io/e/introduction-to-visual-studio-extensibility"
+archive: true
+event: "https://youtu.be/-qc5AXNewRw"
 # To be filled out by you
 # Short an descriptive title
 title: "Introduction to Visual Studio Extensibility"
