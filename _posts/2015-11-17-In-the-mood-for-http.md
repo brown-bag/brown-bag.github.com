@@ -4,8 +4,8 @@ layout: single
 permalink: "/2015/11/17/in-the-mood-for-http"
 start: '2015-11-17 12:00:00 -0800'
 end: '2015-11-17 12:45:00 -0800'
-archive: false
-event: ""
+archive: true
+event: "https://youtu.be/lehvnbBS5eU"
 # To be filled out by you
 # Short an descriptive title
 title: In The Mood For HTTP
@@ -26,4 +26,4 @@ github:
 # Your homepage or blog
 homepage: http://webapibook.net/
 ---
-Join Glenn Block and Darrel Miller for episode #5. After a week off, we are back, but on a different day, because recording live shows on an airplane is tricky.  Make sure you register and submit your questions, because we are rested and ready to be challenged! 
+Join Glenn Block and Darrel Miller for episode #5. After a week off, we are back, but on a different day, because recording live shows on an airplane is tricky.  Make sure you register and submit your questions, because we are rested and ready to be challenged!

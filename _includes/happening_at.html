@@ -1,15 +1,20 @@
 <h4>
   <time datetime="{{ include.bag.start | date: "%Y-%m-%dT%H:%M%:z" }}"></time>
   <div title="Add to Calendar" class="addthisevent" style="vertical-align: middle;">
-      <button type="submit" class="btn btn-default btn-sm">
-        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Add to calendar
-      </button>
-      <span class="start eventTime" data-date="{{ include.bag.start | date: "%Y-%m-%dT%H:%M%:z" }}"></span>
-      <span class="end eventTime" data-date="{{ include.bag.end | date: "%Y-%m-%dT%H:%M%:z" }}"></span>
-      <span class="title">{{ include.bag.title }}</span>
-      <span class="description">{{ include.bag.content }}</span>
-      <span class="all_day_event">false</span>
-      <span class="date_format">MM-DD-YYYY</span>
-      <span class="location">{{ include.bag.event }}</span>
+    <button type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add to calendar">
+      <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+    </button>
+    <span class="start eventTime" data-date="{{ include.bag.start | date: "%Y-%m-%dT%H:%M%:z" }}"></span>
+    <span class="end eventTime" data-date="{{ include.bag.end | date: "%Y-%m-%dT%H:%M%:z" }}"></span>
+    <span class="title">{{ include.bag.title }}</span>
+    <span class="description">{{ include.bag.content }}</span>
+    <span class="all_day_event">false</span>
+    <span class="date_format">MM-DD-YYYY</span>
+    <span class="location">{{ include.bag.event }}</span>
   </div>
+  <form action="{{ include.bag.permalink }}" target="_blank" style="display: inline;">
+    <button type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="bottom" title="Bookmark">
+      <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+    </button>
+  </form>
 </h4>
