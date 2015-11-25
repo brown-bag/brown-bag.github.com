@@ -4,8 +4,8 @@ layout: single
 permalink: "/2015/11/02/no-code-can-hide-from-the-cop"
 start: '2015-11-02 12:00:00 +0100'
 end: '2015-11-02 12:45:00 +0100'
-archive: false
-event: "http://ccst.io/e/no-code-can-hide-from-the-cop"
+archive: true
+event: "https://youtu.be/Qdhc0zk_yrY"
 # To be filled out by you
 # Short an descriptive title
 title: "Policing the CLR: intercepting runtime code with CodeCop"
