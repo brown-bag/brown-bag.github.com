@@ -1,7 +1,7 @@
 <div class="page-header" id="bags">
   <h1>Bags <small>Attend, now!</small></h1>
 </div>
-{% assign bags = site.posts | where: "archive", false %}
+{% assign bags = site.posts | where: "archive", false | sort: "start" %}
 {% for bag in bags %}
 {% if bag.event != "" %}
 <div class="featurette" id="{{ bag.title | slugify }}">
