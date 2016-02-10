@@ -1,5 +1,7 @@
 excerpt_separator: <!--more-->
 permalink: /:year/:month/:day/:title.html
+# We want future posts!
+future: true
 
 name: brown-bag.net - Feed your brain
 description: A virtual conference held as brown-bags
@@ -19,4 +21,4 @@ thanks:
   - name: Mike Minutillo
     link: "http://www.codermike.com"
   - name: Sean Feldman
-    link: "http://weblogs.asp.net/sfeldman"            
+    link: "http://weblogs.asp.net/sfeldman"
